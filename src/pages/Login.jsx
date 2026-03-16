@@ -10,19 +10,20 @@ export default function Login() {
     e.preventDefault()
 
     const { error } = await supabase.auth.signInWithPassword({
-      email: email,
-      password: password
+      email,
+      password
     })
 
     if (error) {
       alert(error.message)
     } else {
       alert("Login correcto")
+      window.location.reload()
     }
   }
 
   return (
-    <div>
+    <div className="form-box">
 
       <h2>Iniciar sesión</h2>
 
@@ -31,20 +32,20 @@ export default function Login() {
         <input
           type="email"
           placeholder="Correo"
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-
-        <br /><br />
 
         <input
           type="password"
           placeholder="Contraseña"
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <br /><br />
-
-        <button>Ingresar</button>
+        <button>
+          Ingresar
+        </button>
 
       </form>
 

@@ -1,8 +1,7 @@
 export default function Home() {
   return (
-    <div>
 
-      <h1>Catálogo de Películas</h1>
+    <div className="home">
 
       <p>
         Bienvenido a nuestro catálogo de películas.
@@ -16,5 +15,6 @@ export default function Home() {
       </p>
 
     </div>
+
   )
 }

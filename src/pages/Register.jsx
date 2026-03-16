@@ -9,9 +9,14 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault()
 
+    if (!email || !password) {
+      alert("Completa todos los campos")
+      return
+    }
+
     const { error } = await supabase.auth.signUp({
-      email: email,
-      password: password
+      email,
+      password
     })
 
     if (error) {
@@ -22,7 +27,8 @@ export default function Register() {
   }
 
   return (
-    <div>
+
+    <div className="form-box">
 
       <h2>Registro de usuario</h2>
 
@@ -31,23 +37,24 @@ export default function Register() {
         <input
           type="email"
           placeholder="Correo"
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-
-        <br /><br />
 
         <input
           type="password"
           placeholder="Contraseña"
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <br /><br />
-
-        <button>Registrarse</button>
+        <button>
+          Registrarse
+        </button>
 
       </form>
 
     </div>
+
   )
 }

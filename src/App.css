@@ -1,42 +1,124 @@
+/* CONTENEDOR PRINCIPAL */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* TITULO PRINCIPAL */
+.main-title {
   text-align: center;
+  font-weight: 600;
+  background: #f4f1ff;
+  padding: 15px;
+  margin-bottom: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* BARRA SUPERIOR */
+.navbar {
+  width: 100%;
+  background: #f4f1ff;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* MENU */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 12px 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav button {
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  padding: 8px 10px;
+  transition: 0.2s;
 }
 
-.card {
-  padding: 2em;
+nav button:hover {
+  color: #6c5ce7;
+  background: #e9e4ff;
+  border-bottom: 2px solid #6c5ce7;
 }
 
-.read-the-docs {
-  color: #888;
+/* FORMULARIOS (LOGIN / REGISTER) */
+.form-box {
+  max-width: 350px;
+  margin: auto;
+}
+
+.form-box input {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.form-box button {
+  margin-top: 6px;
+  padding: 8px 14px;
+}
+
+/* BUSCADOR */
+.search-bar {
+  margin-bottom: 30px;
+}
+
+/* GRID DE PELICULAS */
+.movies-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* TARJETA DE PELICULA */
+.movie-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* BOTONES DE LA CARD */
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.delete-btn {
+  background: #ff6b6b;
+}
+
+.delete-btn:hover {
+  background: #ff4d4d;
+}
+
+/* SECCION AGREGAR PELICULA */
+.add-movie-box {
+  width: 280px;
+  margin-left: 0;
+}
+
+.add-movie-box input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.add-movie-box button {
+  margin-top: 4px;
 }
